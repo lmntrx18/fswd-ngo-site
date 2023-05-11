@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--divinectorweb.com-->
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>We Save Animals - NGO</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.bundle.min.js"></script> 
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+	$(document).ready(function () {
+	$("form").submit(function (event) {
+		event.preventDefault();
+		var formData = {
+		name: $("#name").val(),
+		email: $("#email").val(),
+		message: $("#message").val(),
+		};
+
+		$.ajax({
+		type: "POST",
+		url: "http://localhost:8080/api/tutorials",
+		data: formData,
+		dataType: "json",
+		encode: true,
+		}).done(function (data) {
+		console.log(data);
+		});
+
+		
+	});
+	});
+	</script>
+	
+
+	<!-- All CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="/home.html"><span class="text-warning">We Save</span> Animals</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="/home.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<div class="dropdown">
+							<a class="nav-link" href="#">About</a>
+							<div class="dropdown-content">
+								<a class="nav-link" href="/about/about.html">About Us</a>
+								<a class="nav-link" href="/about/impacts.html">Our Impact</a>
+							</div>
+						  </div>
+					</li>
+					<li class="nav-item">
+						<div class="dropdown">
+							<a class="nav-link" href="#">Ways to help</a>
+							<div class="dropdown-content">
+								<a class="nav-link" href="/waysToHelp/donate.html">Donate</a>
+								<a class="nav-link" href="/waysToHelp/adopt.html">Adopt</a>
+								<a class="nav-link" href="/waysToHelp/volunteer.html">Volunteer</a>
+							</div>
+						  </div>
+					</li>
+					<li class="nav-item">
+						<div class="dropdown">
+							<a class="nav-link" href="#">What We Do</a>
+							<div class="dropdown-content">
+								<a class="nav-link" href="/WhatWeDo/Rescue&Rehab.html">Rescue and Rehab</a>
+								<a class="nav-link" href="/WhatWeDo/Spay&Neuter.html">Spay and Neuter</a>
+								<a class="nav-link" href="/WhatWeDo/Vet.html">Veterinary Hospital</a>
+							</div>
+						  </div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/Contact.html">Contact Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/waysToHelp/donate.html">Donate</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+<section class="contact section-padding" id="contact">
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header text-center pb-5">
+                    <h2>Contact Us</h2>
+                    <p><strong><i class="bi bi-geo-alt"></i> Address:</strong> QFRR+JP7, K. Chudahalli, Karnataka 560082<br>
+					<strong><i class="bi bi-telephone"></i> Phone:</strong> (Phone number)<br>	
+					<strong><i class="bi bi-envelope"></i> Email:</strong> wesaveanimals@gmail.com</p>
+					<h4>Share our Website</h4>
+					<p class="socials">
+						<a target="blank" class="twitter"><i style="font-size: 2rem;" class="bi bi-twitter text-dark mx-1"></i></a> 
+						<a target="blank" class="facebook"><i style="font-size: 2rem;" class="bi bi-facebook text-dark mx-1"></i></a> 
+						<a target="blank" class="linkedin"><i style="font-size: 2rem;" class="bi bi-linkedin text-dark mx-1"></i></a>
+						<a target="blank" class="whatsapp"><i style="font-size: 2rem;" class="bi bi-whatsapp text-dark mx-1"></i></a>
+					</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124505.57401562578!2d77.45247569464935!3d12.791543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae41bc0304b55b%3A0x767846db379dcc5a!2sWe%20Save%20Animals!5e0!3m2!1sen!2sin!4v1683567363532!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row m-0">
+            <div class="col-md-12 p-0 pt-4 pb-4">
+				<h2 class="text-center">Subscribe to get latest updates</h2>
+                <form class="bg-light p-4 m-auto" id="form">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <input class="form-control" placeholder="Full Name" required="" type="text" id="name">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <input class="form-control" placeholder="Email" required="" type="email" id="email">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <textarea class="form-control" placeholder="Message" required="" rows="3" id="message"></textarea>
+                            </div>
+                        </div><button class="btn btn-warning btn-lg btn-block mt-3" type="submit">Send Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+	const link = encodeURI('https://openjavascript.info');
+	const msg = encodeURIComponent('Hey, I found this NGO Site called "We Save Animals"');
+	const title = encodeURIComponent('Article or Post Title Here');
+	const fb = document.querySelector('.facebook');
+	fb.href = `https://www.facebook.com/share.php?u=${link}`;
+	const twitter = document.querySelector('.twitter');
+	twitter.href = `http://twitter.com/share?&url=${link}&text=${msg}&hashtags=javascript,programming`;
+	const linkedIn = document.querySelector('.linkedin');
+	linkedIn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${link}`;
+	const whatsapp = document.querySelector('.whatsapp');
+	whatsapp.href = `https://api.whatsapp.com/send?text=${msg}: ${link}`;
+</script>
+</body>
+</html>
